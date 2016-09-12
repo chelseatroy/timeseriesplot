@@ -15,18 +15,20 @@ def enter_data(request):
     form = EmployeeDataForm(request.POST)
     if form.is_valid():
         employee_info = StringIO(form.cleaned_data['employee_info'])
+        print "stringbuffer: " + employee_info.getvalue()
 
-        employee_data = pd.read_csv(employee_info)
+        employee_data = pd.read_csv('salaries/data/somefile.csv')
+        print "dataframe: "
         print employee_data
 
         employees = []
 
-        employee_data.apply(
-            employees.append(save_employee_from_row),
-            axis=1
-        )
+        # employee_data.apply(
+        #     employees.append(save_employee_from_row),
+        #     axis=1
+        # )
 
-        salary_model = predict_salaries(employees)
+        salary_model = predict_salaries(employee_data)
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
@@ -45,10 +47,4 @@ def save_employee_from_row(employee_row):
     employee.role = employee_row[5]
     return employee
 
-# 2,red,f,12,2,engineer
-# 2,green,g,14,4,designer
-# 2,red,f,13,5,engineer
-# 2,blue,f,12,1,developer
-# 2,red,g,17,4,developer
-# 2,green,f,12,4,engineer
-# 2,red,g,11,2,designer
+# 2,red,f,12,2,engineer\r2,green,g,14,4,designer\r2,red,f,13,5,engineer\r2,blue,f,12,1,developer\r2,red,g,17,4,developer\r2,green,f,12,4,engineer\r2,red,g,11,2,designer\r
