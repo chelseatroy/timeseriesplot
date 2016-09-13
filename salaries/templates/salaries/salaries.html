@@ -3,7 +3,7 @@
 <h3>Enter Your Data in CSV format</h3>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'salaries:enter_data' %}" method="post" class="form">
+<form enctype="multipart/form-data" action="{% url 'salaries:enter_data' %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form layout='inline' %}
 

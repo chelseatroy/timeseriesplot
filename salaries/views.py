@@ -12,27 +12,20 @@ def salaries(request):
     return render(request, 'salaries/salaries.html', {'form': form})
 
 def enter_data(request):
-    form = EmployeeDataForm(request.POST)
-    if form.is_valid():
-        employee_info = StringIO(form.cleaned_data['employee_info'])
-        print "stringbuffer: " + employee_info.getvalue()
+    if request.POST and request.FILES:
+        form = EmployeeDataForm(request.POST, request.FILES)
 
-        employee_data = pd.read_csv('salaries/data/somefile.csv')
-        print "dataframe: "
-        print employee_data
+        if form.is_valid():
+            print "FORM BE VALID"
+            employee_data = pd.read_csv(request.FILES['employee_info'])
 
-        employees = []
-
-        # employee_data.apply(
-        #     employees.append(save_employee_from_row),
-        #     axis=1
-        # )
-
-        salary_model = predict_salaries(employee_data)
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('salaries:display_coefficients')) #, args=(salary_model.gender_coeff, etc))) #,
+            employees = []
+            # employee_data.apply(
+            #     employees.append(save_employee_from_row),
+            #     axis=1
+            # )
+            salary_model = predict_salaries(employee_data)
+    return HttpResponseRedirect(reverse('salaries:display_coefficients')) #, args=(salary_model.gender_coeff, etc))) #,
 
 def display_coefficients(request):
     return render(request, 'salaries/employee_results.html') #, {'gender_coefficient': gender, 'ethnicity_coefficient': ethnicity}

@@ -1,6 +1,8 @@
 
 def predict_salaries(employees):
-    print "AA"
+    print "dataframe: "
+    print employees
+
     # print employees
     # for employee in employees:
     #     print employee.age
