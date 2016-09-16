@@ -16,15 +16,14 @@ def enter_data(request):
         form = EmployeeDataForm(request.POST, request.FILES)
 
         if form.is_valid():
-            print "FORM BE VALID"
-            employee_data = pd.read_csv(request.FILES['employee_info'])
+            employee_dataframe = pd.read_csv(request.FILES['employee_info'])
 
             employees = []
             # employee_data.apply(
             #     employees.append(save_employee_from_row),
-            #     axis=1
+            #     axis=0
             # )
-            salary_model = predict_salaries(employee_data)
+            salary_model = predict_salaries(employee_dataframe)
     return HttpResponseRedirect(reverse('salaries:display_coefficients')) #, args=(salary_model.gender_coeff, etc))) #,
 
 def display_coefficients(request):
