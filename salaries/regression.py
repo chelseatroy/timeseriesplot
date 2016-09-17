@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn import datasets, linear_model
 
 def predict_salaries(employee_dataframe):
     print "dataframe: "
@@ -19,7 +20,9 @@ def predict_salaries(employee_dataframe):
     print(roles)
     df['roles_num'] = map(lambda x: np.where(roles == x)[0][0], df['role'])
 
-    df = df.drop(['ethnicity', 'gender', 'role'], axis=1)
+    results = df['salary'].values
+
+    df = df.drop(['ethnicity', 'gender', 'role', 'salary'], axis=1)
 
     print df
 
@@ -27,17 +30,13 @@ def predict_salaries(employee_dataframe):
 
     print(train_data)
 
-    # print employees
-    # for employee in employees:
-    #     print employee.age
-    #     print employee.ethnicity
-    #     print employee.gender
-    #     print "the end"
+    trainer = linear_model.LinearRegression()
+    trainer.fit(train_data, results)
 
+    print('Coefficients: \n', trainer.coef_)
 
-# ethnicity
-# gender
-# age
-# years_experience
-# role
-# salary
+    print("Residual sum of squares: %.2f"
+          % np.mean((trainer.predict(train_data) - results) ** 2))
+
+    # Explained variance score: 1 is perfect prediction
+    print('Variance score: %.2f' % trainer.score(train_data, results))
