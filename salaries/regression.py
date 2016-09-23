@@ -30,7 +30,9 @@ def predict_salaries(employee_dataframe):
     trainer = linear_model.Lasso(alpha = 0.1)
     trainer.fit(train_x, train_y)
 
-    weights = dict(zip(df.columns.values, abs(trainer.coef_)))
+    names = ['Ethnicity', 'Gender', 'Role', 'Age', "Years Experience"]
+
+    weights = dict(zip(names, abs(trainer.coef_)))
     return list(reversed(sorted(weights.items(), key=operator.itemgetter(1))))
 
     #

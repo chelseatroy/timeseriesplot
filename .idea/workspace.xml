@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f18bb6-0417-42ab-8619-3b8172bbd643" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salaries/regression.py" afterPath="$PROJECT_DIR$/salaries/regression.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salaries/templates/salaries/employee_results.html" afterPath="$PROJECT_DIR$/salaries/templates/salaries/employee_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salaries/views.py" afterPath="$PROJECT_DIR$/salaries/views.py" />
     </list>
     <ignored path="biasinspector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee_results.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employee_results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/salaries/templates/salaries/employee_results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="135">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -80,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regression.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="regression.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/salaries/regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -117,17 +114,17 @@
         <option value="$PROJECT_DIR$/salaries/templates/salaries/salaries.html" />
         <option value="$PROJECT_DIR$/salaries/forms.py" />
         <option value="$PROJECT_DIR$/salaries/data/somefile.csv" />
-        <option value="$PROJECT_DIR$/salaries/regression.py" />
         <option value="$PROJECT_DIR$/salaries/urls.py" />
         <option value="$PROJECT_DIR$/salaries/views.py" />
         <option value="$PROJECT_DIR$/salaries/templates/salaries/employee_results.html" />
+        <option value="$PROJECT_DIR$/salaries/regression.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
+    <option name="x" value="266" />
     <option name="y" value="42" />
-    <option name="width" value="705" />
+    <option name="width" value="1159" />
     <option name="height" value="791" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -349,7 +346,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="42" width="705" height="791" extended-state="0" />
+    <frame x="266" y="42" width="1159" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20608108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -447,16 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/salaries/regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/salaries/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -487,9 +474,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/salaries/templates/salaries/employee_results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="135">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salaries/regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
