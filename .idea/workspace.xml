@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f18bb6-0417-42ab-8619-3b8172bbd643" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salaries/data/somefile.csv" afterPath="$PROJECT_DIR$/salaries/data/somefile.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salaries/templates/salaries/salaries.html" afterPath="$PROJECT_DIR$/salaries/templates/salaries/salaries.html" />
     </list>
     <ignored path="biasinspector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,32 +26,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/salaries/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="216">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/biasinspector/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/salaries/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="salaries.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="salaries.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/salaries/templates/salaries/salaries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            <state relative-caret-position="207">
+              <caret line="28" column="143" selection-start-line="28" selection-start-column="143" selection-end-line="28" selection-end-column="143" />
               <folding />
             </state>
           </provider>
@@ -80,7 +58,7 @@
       <file leaf-file-name="regression.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/salaries/regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="585">
               <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -89,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="somefile.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="somefile.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/salaries/data/somefile.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -111,19 +89,19 @@
         <option value="$PROJECT_DIR$/biasinspector/settings.py" />
         <option value="$PROJECT_DIR$/biasinspector/urls.py" />
         <option value="$PROJECT_DIR$/salaries/somefile.csv" />
-        <option value="$PROJECT_DIR$/salaries/templates/salaries/salaries.html" />
         <option value="$PROJECT_DIR$/salaries/forms.py" />
         <option value="$PROJECT_DIR$/salaries/urls.py" />
         <option value="$PROJECT_DIR$/salaries/views.py" />
         <option value="$PROJECT_DIR$/salaries/regression.py" />
         <option value="$PROJECT_DIR$/salaries/templates/salaries/employee_results.html" />
         <option value="$PROJECT_DIR$/salaries/data/somefile.csv" />
+        <option value="$PROJECT_DIR$/salaries/templates/salaries/salaries.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="268" />
-    <option name="y" value="23" />
+    <option name="x" value="147" />
+    <option name="y" value="35" />
     <option name="width" value="1159" />
     <option name="height" value="791" />
   </component>
@@ -378,7 +356,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="268" y="23" width="1159" height="791" extended-state="0" />
+    <frame x="147" y="35" width="1159" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20534945" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -460,16 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/salaries/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/biasinspector/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -488,20 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/salaries/regression.py">
+    <entry file="file://$PROJECT_DIR$/salaries/data/somefile.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/salaries/templates/salaries/salaries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -514,10 +472,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/salaries/data/somefile.csv">
+    <entry file="file://$PROJECT_DIR$/salaries/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salaries/regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salaries/templates/salaries/salaries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="28" column="143" selection-start-line="28" selection-start-column="143" selection-end-line="28" selection-end-column="143" />
           <folding />
         </state>
       </provider>

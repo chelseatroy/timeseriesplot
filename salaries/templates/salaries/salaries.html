@@ -1,4 +1,33 @@
 {% load bootstrap3 %}
+<h2>This is Bias Inspector.</h2>
+
+<p>Bias inspector is a free, anonymous tool to help you sniff out bias in employee compensation.</p>
+
+<h3>What it does:</h3>
+
+<p>It takes in some data about a set of employees, including demographic data and salary. It uses this data to train a linear regression model to predict salaries based on the data. Then it tells you which employee data it used to predict salary, and how heavily, so you'll know if there is a pattern in the salaries relative to gender, ethnicity, age, role, or experience.</p>
+
+<h3>What it does NOT do:</h3>
+
+<p>Request, require, or save any data about your company or any identifying information about employees' data. It does not need a company name or employee names: an anonymous CSV will do.</p>
+
+<h3>How it works:</h3>
+
+<p>First, you'll need a CSV that contains at least 6 columns:</p>
+<ul>
+    <li>age</li>
+    <li>role</li>
+    <li>years_experience</li>
+    <li>ethnicity</li>
+    <li>gender</li>
+    <li>salary</li>
+</ul>
+<p>Your CSV can also have other columns, if you would like, but the program won't use them.</p>
+
+<p>Upload the CSV, and when you click submit you will see a report of the patterns in your salary data.</p>
+
+<p>If the model shows patterns in compensation related to gender or ethnicity, it may be time to look at how to better recognize and compensate effort and skill for employees in underrepresented groups.</p>
+
 
 <h3>Enter Your Data in CSV format</h3>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
