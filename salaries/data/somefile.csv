@@ -1,8 +1,8 @@
-ethnicity,gender,age,years_experience,role,salary
-red,f,12,2,engineer,50000
-green,g,14,4,designer,60000
-red,f,13,5,engineer,70000
-blue,f,12,1,developer,50000
-red,g,17,4,unicorn,20000
-green,f,12,4,engineer,80000
-red,g,11,2,designer,60000
+ethnicity,gender,age,years_experience,role,salary,otherthing
+red,f,12,2,engineer,50000,7
+green,g,14,4,designer,60000,7
+red,f,13,5,engineer,70000,7
+blue,f,12,1,developer,50000,7
+red,g,17,4,unicorn,20000,7
+green,f,12,4,engineer,80000,7
+red,g,11,2,designer,60000,7
