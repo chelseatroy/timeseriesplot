@@ -1,13 +1,12 @@
 import pandas as pd
 import numpy as np
 from sklearn import datasets, preprocessing, linear_model
+import operator
 
 def predict_salaries(employee_dataframe):
-    print "dataframe: "
-    print employee_dataframe
-
     df = employee_dataframe.dropna()
 
+    #Pre-processing
     df['age_std'] = preprocessing.scale(df['age'])
     df['years_experience_std'] = preprocessing.scale(df['years_experience'])
 
@@ -25,17 +24,18 @@ def predict_salaries(employee_dataframe):
     df = df.drop(['ethnicity', 'gender', 'role', 'salary'], axis=1)
     df = df[['ethnicities_num', 'genders_num', 'roles_num', 'age_std', 'years_experience_std']]
 
-    print df
-
     train_x = df.values
 
+    #Fitting the Model
     trainer = linear_model.Lasso(alpha = 0.1)
     trainer.fit(train_x, train_y)
 
-    print('Coefficients: \n', trainer.coef_)
+    weights = dict(zip(df.columns.values, abs(trainer.coef_)))
+    return list(reversed(sorted(weights.items(), key=operator.itemgetter(1))))
 
-    print("Residual sum of squares: %.2f"
-          % np.mean((trainer.predict(train_x) - train_y) ** 2))
-
-    # Explained variance score: 1 is perfect prediction
-    print('Variance score: %.2f' % trainer.score(train_x, train_y))
+    #
+    # print("Residual sum of squares: %.2f"
+    #       % np.mean((trainer.predict(train_x) - train_y) ** 2))
+    #
+    # # Explained variance score: 1 is perfect prediction
+    # print('Variance score: %.2f' % trainer.score(train_x, train_y))

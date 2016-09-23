@@ -1,2 +1,21 @@
-<h2>HELLO THERE</h2>
-<p>Good job making it this far.</p>
+{% block title %}
+<h2>When we fit a model to your salary data, here's what we found:</h2>
+{% endblock %}
+
+<h3>In order of MOST to LEAST important, the model uses your employees':</h3>
+
+{% block content %}
+{% if ordered_weights %}
+<div class="row">
+    {% for weight in ordered_weights %}
+    <div class="col-xs-6 col-lg-4">
+        <h4> {{ weight.0 }} </h4>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+{% endif %}
+{% endblock %}
+
+<h3>to predict their salaries.</h3>
+
