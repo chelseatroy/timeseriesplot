@@ -32,7 +32,12 @@ def predict_salaries(employee_dataframe):
 
     names = ['Ethnicity', 'Gender', 'Role', 'Age', "Years Experience"]
 
-    weights = dict(zip(names, abs(trainer.coef_)))
+    coefficients = []
+    total_weight = sum(abs(trainer.coef_))
+    for coefficient in abs(trainer.coef_):
+        coefficients.append(round((coefficient/total_weight)*100, 2))
+
+    weights = dict(zip(names, coefficients))
     return list(reversed(sorted(weights.items(), key=operator.itemgetter(1))))
 
     #

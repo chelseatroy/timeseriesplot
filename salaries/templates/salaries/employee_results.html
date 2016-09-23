@@ -9,7 +9,7 @@
 <div class="row">
     {% for weight in ordered_weights %}
     <div class="col-xs-6 col-lg-4">
-        <h4> {{ weight.0 }} </h4>
+        <h4> {{ weight.0 }} for {{ weight.1 }}% of the total prediction coefficient </h4>
     </div>
     {% endfor %}
 </div>
@@ -17,5 +17,5 @@
 {% endif %}
 {% endblock %}
 
-<h3>to predict their salaries.</h3>
+<h3>to predict employee salaries.</h3>
 
