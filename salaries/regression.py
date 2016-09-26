@@ -12,12 +12,15 @@ def predict_salaries(employee_dataframe):
 
     ethnicities = df['ethnicity'].unique()
     df['ethnicities_num'] = map(lambda x: np.where(ethnicities==x)[0][0], df['ethnicity'])
+    df['ethnicities_num'] = preprocessing.scale(df['ethnicities_num'])
 
     genders = df['gender'].unique()
     df['genders_num'] = map(lambda x: np.where(genders == x)[0][0], df['gender'])
+    df['genders_num'] = preprocessing.scale(df['genders_num'])
 
     roles = df['role'].unique()
     df['roles_num'] = map(lambda x: np.where(roles == x)[0][0], df['role'])
+    df['roles_num'] = preprocessing.scale(df['roles_num'])
 
     train_y = df['salary'].values
 

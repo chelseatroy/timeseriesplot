@@ -1,0 +1,20 @@
+.list-item {
+    padding-left: 15px;
+}
+
+.header {
+    background-color: #00ced1;
+    color: #ffffff;
+    margin-top: 0;
+    padding: 20px 20px 20px 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4 {
+    color: #00ced1;
+}
+
+body {
+    padding: 20px 20px 20px 40px;
+}

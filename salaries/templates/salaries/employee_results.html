@@ -1,21 +1,34 @@
-{% block title %}
-<h2>When we fit a model to your salary data, here's what we found:</h2>
-{% endblock %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bias Inspector</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/salaries.css' %}">
+</head>
+<body>
+<div class="container-fluid">
 
-<h3>In order of MOST to LEAST important, the model uses your employees':</h3>
+    <h3 class="header">When we fit a model to your salary data, here's what we found:</h3>
 
-{% block content %}
-{% if ordered_weights %}
-<div class="row">
-    {% for weight in ordered_weights %}
-    <div class="col-xs-6 col-lg-4">
-        <h4> {{ weight.0 }} for {{ weight.1 }}% of the total prediction coefficient </h4>
+    <h6>In order of MOST to LEAST important, the model uses your employees':</h6>
+
+    {% block content %}
+    {% if ordered_weights %}
+    <div class="row">
+        {% for weight in ordered_weights %}
+        <div>
+            <li class="list-item"> {{ weight.0 }} for {{ weight.1 }}% of the total prediction coefficient </li>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-{% else %}
-{% endif %}
-{% endblock %}
+    {% else %}
+    {% endif %}
+    {% endblock %}
 
-<h3>to predict employee salaries.</h3>
+    <h6>to predict employee salaries.</h6>
+</div>
+</body>
+</html>
 
