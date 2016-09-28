@@ -1,0 +1,28 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bias Inspector</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/salaries.css' %}">
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <h3>Enter Your Data in CSV format</h3>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form enctype="multipart/form-data" action="{% url 'data:enter_data' %}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form layout='inline' %}
+
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+</div>
+</body>
+</html>
+
