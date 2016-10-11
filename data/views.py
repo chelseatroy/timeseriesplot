@@ -3,14 +3,10 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from .forms import DataForm
 from .MySeries import MySeries
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-from pylab import figure, axes, pie, title
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 
 class DataKeeper:
-    apple = MySeries()
+    series_prediction = MySeries()
 
 def data(request):
     form = DataForm()
@@ -22,9 +18,9 @@ def enter_data(request):
 
         if form.is_valid():
             # dataframe = pd.read_csv(request.FILES['info'])
-            DataKeeper.apple.load_data(request.FILES['info'])  # load in a csv - remember no header!
-            DataKeeper.apple.train_model()  # train the model to fit the data
-            DataKeeper.apple.make_predictions()
+            DataKeeper.series_prediction.load_data(request.FILES['info'])  # load in a csv - remember no header!
+            DataKeeper.series_prediction.train_model()  # train the model to fit the data
+            DataKeeper.series_prediction.make_predictions()
 
             # DataKeeper.results = predict(dataframe)
     return HttpResponseRedirect(reverse('data:display_results'))
@@ -33,7 +29,7 @@ def display_results(request):
     return render(request, 'timeseries/results.html', {'results': None})
 
 def test_matplotlib(request):
-    ping = DataKeeper.apple.plot_all()
+    ping = DataKeeper.series_prediction.plot_all()
 
     canvas = FigureCanvasAgg(ping)
     response = HttpResponse(content_type='image/png')
